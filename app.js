@@ -49,8 +49,8 @@ app.post("/", (req, res) => {
         response.on("data", (data) => {
             var responseData = JSON.parse(data);
 
-            // if(response.statusCode === 200) {
-            if(responseData.errors.length === 0) {
+            if(response.statusCode === 200) {
+            // if(responseData.errors.length === 0) {
                 res.sendFile(__dirname + "/success.html");
             }else {
                 res.sendFile(__dirname + "/faliure.html");
