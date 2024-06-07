@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-const MAILCHIMP_API_KEY = "9b63504198dbc666ceaf8c8e6978e897-us22";
+const MAILCHIMP_API_KEY = "369424b8b844eb24a4995bcf7e76fa58-us22";
 
 const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
@@ -49,8 +49,8 @@ app.post("/", (req, res) => {
         response.on("data", (data) => {
             var responseData = JSON.parse(data);
 
-            if(response.statusCode === 200) {
-            // if(responseData.errors.length === 0) {
+            // if(response.statusCode === 200) {
+            if(responseData.errors.length === 0) {
                 res.sendFile(__dirname + "/success.html");
             }else {
                 res.sendFile(__dirname + "/faliure.html");
