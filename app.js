@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-const MAILCHIMP_API_KEY = env.API_KEY;
+const MAILCHIMP_API_KEY = process.env.API_KEY;
 
 const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
