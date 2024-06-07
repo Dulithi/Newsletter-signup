@@ -73,6 +73,3 @@ app.listen(port, (req, res) => {
 })
 
 
-// MAILCHIMP_API_KEY = 9b63504198dbc666ceaf8c8e6978e897-us22
-
-// audianceID = f1032ce2ee
